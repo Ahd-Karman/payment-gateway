@@ -12,7 +12,7 @@
 
 
 @section('content')
-              
+
 
 
     <!-- BEGIN: Content-->
@@ -22,6 +22,58 @@
             <div class="content-header row">
             </div>
             <div class="content-body">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row card mt-2 ">
+                        <div class="col-xl-12">
+                            <div class="row">
+                                <span class=" col-xl-6 col-md-6 col-sm-6 my-2">   عرض الإحصائيات </span>
+                                <div class="col-xl-3 col-md-3 col-sm-3 dropdown">
+
+
+                                    <b class="text-dark">  للعام </b>
+                                    <button class="mb-1 btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSec" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        2020
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButtonSec">
+                                        <a class="dropdown-item" href="javascript:;">2020</a>
+                                        <a class="dropdown-item" href="javascript:;">2019</a>
+                                        <a class="dropdown-item" href="javascript:;">2018</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-3 col-sm-3 dropdown">
+                                    <b class="text-dark">  للشهر </b>
+                                    <button class="mb-1 btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSec" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        يناير
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButtonSec" style="max-height:400px;
+                                    overflow-y: scroll;">
+                                        <a class="dropdown-item" href="javascript:;">يناير</a>
+                                        <a class="dropdown-item" href="javascript:;">فبراير</a>
+                                        <a class="dropdown-item" href="javascript:;">مارس</a>
+                                        <a class="dropdown-item" href="javascript:;">ابريل</a>
+                                        <a class="dropdown-item" href="javascript:;">مايو</a>
+                                        <a class="dropdown-item" href="javascript:;">يونيو</a>
+                                        <a class="dropdown-item" href="javascript:;">يوليو</a>
+                                        <a class="dropdown-item" href="javascript:;">اغسطس</a>
+                                        <a class="dropdown-item" href="javascript:;">سبتمبر</a>
+                                        <a class="dropdown-item" href="javascript:;">اكتوبر</a>
+                                        <a class="dropdown-item" href="javascript:;">نوفمبر</a>
+                                        <a class="dropdown-item" href="javascript:;">ديسمبر</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            </div>
+
+
+                    </div>
+
+                </div>
+
+
                 <!-- Dashboard Analytics Start -->
                 <section id="dashboard-analytics">
                     <div class="row">
@@ -31,14 +83,6 @@
 
                                 <div class="card-body pb-1">
                                     <div class="d-flex justify-content-around align-items-center flex-wrap">
-                                        <div class="user-analytics ">
-                                            <i class="fas fa-circle-minus"></i>
-                                            <span class="align-middle text-muted"> سحب مبلغ</span>
-                                            <div class="d-flex">
-                                                <div id="radial-success-chart"></div>
-                                                <h5 class="mt-1 ml-25">50K Y.R ≈ $95</h5>
-                                            </div>
-                                        </div>
                                         <div class="sessions-analytics ">
                                             <i class="bx bx-trending-up align-middle mr-25"></i>
                                             <span class="align-middle text-muted">تحويل رصيد</span>

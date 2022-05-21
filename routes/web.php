@@ -96,16 +96,16 @@ Route::post('/contact', [ContuctController::class,'contuctUs'])->name('send_cont
 // new docs
 Route::get('/docs/home', function() {
 return view('new-docs.index');
-})->name('docs/home'); 
+})->name('docs/home');
 Route::get('/new-docs/card', function() {
 return view('new-docs.card');
-})->name('docs/card'); 
+})->name('docs/card');
 Route::get('/new-docs/checkout', function() {
 return view('new-docs.checkout');
-})->name('docs/checkout'); 
+})->name('docs/checkout');
 Route::get('/new-docs/tutorial', function() {
     return view('new-docs.tutorial');
-    })->name('docs/tutorial'); 
+    })->name('docs/tutorial');
 
 Route::get('/document', function () {
     return view('docs/docs');
@@ -123,15 +123,14 @@ Route::get('/test-card', function () {
 
 Route::group(['middleware'=>['auth']],function(){
 
-    
+
 /**
  * Adding roles for the authentication and users
  * You should go to this route every time the database data are lost
  */
-Route::get('/generate_roles',[SettingController::class,'generateRoles']);
 
 
-    
+
 //This route is calling the method transfering money
 Route::post('money/transfer',[CustomerController::class,'transferMoney'])->name('transfer_money');
 
@@ -152,7 +151,7 @@ Route::get('/buisness-info', function (){
     Route::get('/customer/dashboard', function(){
         return view('customer_dashboard/home');
     })->name('home');
-    
+
     Route::get('/customer_dashboard', [UserProfileController::class,'Profile']
     )->name('customer_dashboard');
 
@@ -162,9 +161,9 @@ Route::get('/buisness-info', function (){
     )->name('addProfile');
     Route::post('/customer_dashboard/edit', [UserProfileController::class,'editProfile']
     )->name('editProfile');
-    
-   
-    
+
+
+
 /*********** Customer Dashboard Routes *************/
 /*********** Customer Dashboard Routes *************/
 //add balance show
@@ -206,7 +205,7 @@ Route::post('/change-password', [App\Http\Controllers\user\ChangePasswordControl
  Route::get('/merchant_dashboard', [MerchantController::class,'index'])->name('merchant_dashboard');
 Route::get('/Transactions', [MerchantController::class,'Transactions'])->name('Transactions');
 Route::get('/listInvoice', [MerchantController::class,'listInvoice'])->name('listInvoice');
-Route::get('/financial_movement', [MerchantController::class,'financial_movement'])->name('financial_movement'); 
+Route::get('/financial_movement', [MerchantController::class,'financial_movement'])->name('financial_movement');
 Route::post('/filter_financial_movement', [MerchantController::class,'filter_financial_movement'])->name('filter_financial_movement');
 Route::get('/bank_account', [MerchantController::class,'bank_account'])->name('bank_account');
 Route::post('/update_acount', [MerchantController::class,'update_acount'])->name('update_acount');
@@ -265,3 +264,5 @@ Route::get('profile', [UserProfileController::class, 'profile'])->name('profile'
 
 
 });
+
+Route::get('/generate_roles',[SettingController::class,'generateRoles']);
